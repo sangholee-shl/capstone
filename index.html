@@ -62,71 +62,74 @@
 <!-- Weld-1 -->
 			<h2 style="background-color: #4696e5;color: white;">전체 용접 상태</h2><br>
 
-			<div style="width:20%; float:left; color: black" onclick ="detail_display_1()" >
+			<div id="txt_1" style="display: block; width:20%; float:left; color: black" onclick ="detail_display_1()" >
 				용접1
 			</div>
-			<div style="width:65%; float:left;">
+			<div id="bar_1" style="display: block; width:65%; float:left;">
 				<div class="container" onclick ="detail_display_1()">
 					<div id="progress_bar_1" class="skill" style="width:40%; height:25px"></div>
 				</div>
 			</div>
-			<div style="width:15%; float:left;">
+			<div id="alarm_1" style="display: block; width:15%; float:left;">
 				<img src="images/green_circle.jpg" height="28px" id="status_indicator_1" onclick ="detail_display_1()">
 			</div>
 
-			<br><br>
-			<div style="width:65%; margin-left:20%">
+			
+			<div id="pic_1" style="display: block; width:65%; margin-left:20%">
+				<br><br>
 				<div onclick ="detail_display_1()" style="background-image: url('images/welding.png'); height:30px; background-size: 100%; background-position: center;">
 					<!-- <img src="images/blue_box.jpg" style="height:30px; margin-left:100%; opacity:0.5"></img> -->
 					<img id="welding_pic_1" align="right" src="images/bg_box.jpg" style="width: 60%; height:30px;"></img>
 
 				</div>
 			</div>
-			<hr>				
+			<hr id="hr_1" style="display: block">				
 <!-- Weld-2 -->				
-			<div style="width:20%; float:left; color: black" onclick ="detail_display_2()">
+			<div id="txt_2" style="display: block; width:20%; float:left; color: black" onclick ="detail_display_2()">
 				용접2
 			</div>
-			<div style="width:65%; float:left;">
+			<div id="bar_2" style="display: block; width:65%; float:left;">
 				<div class="container" onclick ="detail_display_2()">
 					<div id="progress_bar_2" class="skill" style="width:18%; height:25px"></div>
 				</div>
 			</div>
-			<div style="width:15%; float:left;">
+			<div id="alarm_2" style="display: block; width:15%; float:left;">
 				<img src="images/green_circle.jpg" height="28px" id="status_indicator_2" onclick ="detail_display_2()">
 			</div>
 
-			<br><br>
-			<div style="width:65%; margin-left:20%">
+			
+			<div id="pic_2" style="display: block; width:65%; margin-left:20%">
+				<br><br>
 				<div onclick ="detail_display_2()" style="background-image: url('images/welding.png'); height:30px; background-size: 100%; background-position: center;">
 					<!-- <img src="images/blue_box.jpg" style="height:30px; margin-left:100%; opacity:0.5"></img> -->
 					<img id="welding_pic_2" align="right" src="images/bg_box.jpg" style="width: 82%; height:30px;"></img>
 
 				</div>
 			</div>
-			<hr>	
+			<hr id="hr_2" style="display: block">	
 <!-- Weld-3 -->				
-			<div style="width:20%; float:left; color: black" onclick ="detail_display_3()">
+			<div id="txt_3" style="display: block; width:20%; float:left; color: black" onclick ="detail_display_3()">
 				용접3
 			</div>
-			<div style="width:65%; float:left;">
+			<div id="bar_3" style="display: block; width:65%; float:left;">
 				<div class="container" onclick ="detail_display_3()">
 					<div id="progress_bar_3" class="skill" style="width:66.3%; height:25px"></div>
 				</div>
 			</div>
-			<div style="width:15%; float:left;">
+			<div id="alarm_3" style="display: block; width:15%; float:left;">
 				<img src="images/red_circle.jpg" height="28px" id="status_indicator_3" onclick ="detail_display_3()">
 			</div>
 
-			<br><br>
-			<div style="width:65%; margin-left:20%">
+			
+			<div id="pic_3" style="display: block; width:65%; margin-left:20%">
+				<br><br>
 				<div onclick ="detail_display_3()" style="background-image: url('images/welding.png'); height:30px; background-size: 100%; background-position: center;">
 					<!-- <img src="images/blue_box.jpg" style="height:30px; margin-left:100%; opacity:0.5"></img> -->
 					<img id="welding_pic_3" align="right" src="images/bg_box.jpg" style="width: 33.7%; height:30px;"></img>
 
 				</div>
 			</div>
-			<hr>							
+			<hr id="hr_3" style="display: block">							
 <!-- Detail-1 -->
 				<h2 id="box_detail_1" style="display: none; background-color: #4696e5;color: white;">용접1 상세정보</h2>
 				<h2 id="box_outlier_1" style="display: none; background-color: rgb(210,210,210);color: black; width:50%">이상치</h2>
@@ -214,6 +217,12 @@
 			<script type="text/javascript">
 				function detail_display_1() {
 					if (document.getElementById('box_detail_1').style.display == "none") {
+						document.getElementById('txt_2').style.display = "none";
+						document.getElementById('bar_2').style.display = "none";
+						document.getElementById('alarm_2').style.display = "none";
+						document.getElementById('pic_2').style.display = "none";
+						document.getElementById('hr_2').style.display = "none";
+						
 						document.getElementById('box_detail_2').style.display = "none";
 						document.getElementById('box_outlier_2').style.display = "none";
 						document.getElementById('gauge_2_br').style.display = "none";
@@ -226,6 +235,12 @@
 						document.getElementById('box_2_4').style.display = "none";
 						document.getElementById('chart_2_4_br').style.display = "none";	
 
+						document.getElementById('txt_3').style.display = "none";
+						document.getElementById('bar_3').style.display = "none";
+						document.getElementById('alarm_3').style.display = "none";
+						document.getElementById('pic_3').style.display = "none";
+						document.getElementById('hr_3').style.display = "none";
+						
 						document.getElementById('box_detail_3').style.display = "none";
 						document.getElementById('box_outlier_3').style.display = "none";
 						document.getElementById('gauge_3_br').style.display = "none";
@@ -251,6 +266,18 @@
 						document.getElementById('chart_1_4_br').style.display = "block";
 					}
 					else {
+						document.getElementById('txt_2').style.display = "block";
+						document.getElementById('bar_2').style.display = "block";
+						document.getElementById('alarm_2').style.display = "block";
+						document.getElementById('pic_2').style.display = "block";
+						document.getElementById('hr_2').style.display = "block";
+
+						document.getElementById('txt_3').style.display = "block";
+						document.getElementById('bar_3').style.display = "block";
+						document.getElementById('alarm_3').style.display = "block";
+						document.getElementById('pic_3').style.display = "block";
+						document.getElementById('hr_3').style.display = "block";
+
 						document.getElementById('box_detail_1').style.display = "none";
 						document.getElementById('box_outlier_1').style.display = "none";
 						document.getElementById('gauge_1_br').style.display = "none";
@@ -266,6 +293,12 @@
 				}
 				function detail_display_2() {
 					if (document.getElementById('box_detail_2').style.display == "none") {
+						document.getElementById('txt_1').style.display = "none";
+						document.getElementById('bar_1').style.display = "none";
+						document.getElementById('alarm_1').style.display = "none";
+						document.getElementById('pic_1').style.display = "none";
+						document.getElementById('hr_1').style.display = "none";
+					
 						document.getElementById('box_detail_1').style.display = "none";
 						document.getElementById('box_outlier_1').style.display = "none";
 						document.getElementById('gauge_1_br').style.display = "none";
@@ -278,6 +311,12 @@
 						document.getElementById('box_1_4').style.display = "none";
 						document.getElementById('chart_1_4_br').style.display = "none";	
 						
+						document.getElementById('txt_3').style.display = "none";
+						document.getElementById('bar_3').style.display = "none";
+						document.getElementById('alarm_3').style.display = "none";
+						document.getElementById('pic_3').style.display = "none";
+						document.getElementById('hr_3').style.display = "none";
+
 						document.getElementById('box_detail_3').style.display = "none";
 						document.getElementById('box_outlier_3').style.display = "none";
 						document.getElementById('gauge_3_br').style.display = "none";
@@ -303,6 +342,18 @@
 						document.getElementById('chart_2_4_br').style.display = "block";
 					}
 					else {
+						document.getElementById('txt_1').style.display = "block";
+						document.getElementById('bar_1').style.display = "block";
+						document.getElementById('alarm_1').style.display = "block";
+						document.getElementById('pic_1').style.display = "block";
+						document.getElementById('hr_1').style.display = "block";
+
+						document.getElementById('txt_3').style.display = "block";
+						document.getElementById('bar_3').style.display = "block";
+						document.getElementById('alarm_3').style.display = "block";
+						document.getElementById('pic_3').style.display = "block";
+						document.getElementById('hr_3').style.display = "block";
+						
 						document.getElementById('box_detail_2').style.display = "none";
 						document.getElementById('box_outlier_2').style.display = "none";
 						document.getElementById('gauge_2_br').style.display = "none";
@@ -318,6 +369,12 @@
 				}
 				function detail_display_3() {
 					if (document.getElementById('box_detail_3').style.display == "none") {
+						document.getElementById('txt_1').style.display = "none";
+						document.getElementById('bar_1').style.display = "none";
+						document.getElementById('alarm_1').style.display = "none";
+						document.getElementById('pic_1').style.display = "none";
+						document.getElementById('hr_1').style.display = "none";
+						
 						document.getElementById('box_detail_1').style.display = "none";
 						document.getElementById('box_outlier_1').style.display = "none";
 						document.getElementById('gauge_1_br').style.display = "none";
@@ -329,6 +386,12 @@
 						document.getElementById('chart_1_3_br').style.display = "none";
 						document.getElementById('box_1_4').style.display = "none";
 						document.getElementById('chart_1_4_br').style.display = "none";	
+
+						document.getElementById('txt_2').style.display = "none";
+						document.getElementById('bar_2').style.display = "none";
+						document.getElementById('alarm_2').style.display = "none";
+						document.getElementById('pic_2').style.display = "none";
+						document.getElementById('hr_2').style.display = "none";
 
 						document.getElementById('box_detail_2').style.display = "none";
 						document.getElementById('box_outlier_2').style.display = "none";
@@ -355,6 +418,18 @@
 						document.getElementById('chart_3_4_br').style.display = "block";
 					}
 					else {
+						document.getElementById('txt_1').style.display = "block";
+						document.getElementById('bar_1').style.display = "block";
+						document.getElementById('alarm_1').style.display = "block";
+						document.getElementById('pic_1').style.display = "block";
+						document.getElementById('hr_1').style.display = "block";
+						
+						document.getElementById('txt_2').style.display = "block";
+						document.getElementById('bar_2').style.display = "block";
+						document.getElementById('alarm_2').style.display = "block";
+						document.getElementById('pic_2').style.display = "block";
+						document.getElementById('hr_2').style.display = "block";
+						
 						document.getElementById('box_detail_3').style.display = "none";
 						document.getElementById('box_outlier_3').style.display = "none";
 						document.getElementById('gauge_3_br').style.display = "none";
