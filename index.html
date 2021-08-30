@@ -60,7 +60,7 @@
 			<section id="one" class="wrapper style2 special">
 <!-- Status -->
 <!-- Weld-1 -->
-			<h2 style="background-color: #4696e5;color: white;">전체 용접 상태</h2><br>
+			<h2 id="txt_all" style="display: block; background-color: #4696e5;color: white;" onclick="all_display_click()">전체 용접 상태</h2><br>
 
 			<div id="txt_1" style="display: block; width:20%; float:left; color: black" onclick ="detail_display_1()" >
 				용접1
@@ -215,232 +215,82 @@
 
 		<!-- My test -->
 			<script type="text/javascript">
+				function all_display(weld_index,display_option) {
+					document.getElementById('txt_'+weld_index).style.display = display_option;
+					document.getElementById('bar_'+weld_index).style.display = display_option;
+					document.getElementById('alarm_'+weld_index).style.display = display_option;
+					document.getElementById('pic_'+weld_index).style.display = display_option;
+					document.getElementById('hr_'+weld_index).style.display = display_option;
+				}
+				function detail_display(weld_index, display_option) {
+					document.getElementById('box_detail_'+weld_index).style.display = display_option;
+					document.getElementById('box_outlier_'+weld_index).style.display = display_option;
+					document.getElementById('gauge_'+weld_index+'_br').style.display = display_option;
+					document.getElementById('box_'+weld_index+'_1').style.display = display_option;
+					document.getElementById('chart_'+weld_index+'_1_br').style.display = display_option;
+					document.getElementById('box_'+weld_index+'_2').style.display = display_option;
+					document.getElementById('chart_'+weld_index+'_2_br').style.display = display_option;
+					document.getElementById('box_'+weld_index+'_3').style.display = display_option;
+					document.getElementById('chart_'+weld_index+'_3_br').style.display = display_option;
+					document.getElementById('box_'+weld_index+'_4').style.display = display_option;
+					document.getElementById('chart_'+weld_index+'_4_br').style.display = display_option;	
+				}
+				function all_display_click() {
+					all_display('1', "block");
+					all_display('2', "block");
+					all_display('3', "block");
+
+					detail_display('1', "none");
+					detail_display('2', "none");
+					detail_display('3', "none");
+				}
+				
 				function detail_display_1() {
 					if (document.getElementById('box_detail_1').style.display == "none") {
-						document.getElementById('txt_2').style.display = "none";
-						document.getElementById('bar_2').style.display = "none";
-						document.getElementById('alarm_2').style.display = "none";
-						document.getElementById('pic_2').style.display = "none";
-						document.getElementById('hr_2').style.display = "none";
+						all_display('2', "none");
+						all_display('3', "none");
 						
-						document.getElementById('box_detail_2').style.display = "none";
-						document.getElementById('box_outlier_2').style.display = "none";
-						document.getElementById('gauge_2_br').style.display = "none";
-						document.getElementById('box_2_1').style.display = "none";
-						document.getElementById('chart_2_1_br').style.display = "none";
-						document.getElementById('box_2_2').style.display = "none";
-						document.getElementById('chart_2_2_br').style.display = "none";
-						document.getElementById('box_2_3').style.display = "none";
-						document.getElementById('chart_2_3_br').style.display = "none";
-						document.getElementById('box_2_4').style.display = "none";
-						document.getElementById('chart_2_4_br').style.display = "none";	
-
-						document.getElementById('txt_3').style.display = "none";
-						document.getElementById('bar_3').style.display = "none";
-						document.getElementById('alarm_3').style.display = "none";
-						document.getElementById('pic_3').style.display = "none";
-						document.getElementById('hr_3').style.display = "none";
-						
-						document.getElementById('box_detail_3').style.display = "none";
-						document.getElementById('box_outlier_3').style.display = "none";
-						document.getElementById('gauge_3_br').style.display = "none";
-						document.getElementById('box_3_1').style.display = "none";
-						document.getElementById('chart_3_1_br').style.display = "none";
-						document.getElementById('box_3_2').style.display = "none";
-						document.getElementById('chart_3_2_br').style.display = "none";
-						document.getElementById('box_3_3').style.display = "none";
-						document.getElementById('chart_3_3_br').style.display = "none";
-						document.getElementById('box_3_4').style.display = "none";
-						document.getElementById('chart_3_4_br').style.display = "none";	
-
-						document.getElementById('box_detail_1').style.display = "block";
-						document.getElementById('box_outlier_1').style.display = "block";
-						document.getElementById('gauge_1_br').style.display = "block";
-						document.getElementById('box_1_1').style.display = "block";
-						document.getElementById('chart_1_1_br').style.display = "block";
-						document.getElementById('box_1_2').style.display = "block";
-						document.getElementById('chart_1_2_br').style.display = "block";
-						document.getElementById('box_1_3').style.display = "block";
-						document.getElementById('chart_1_3_br').style.display = "block";
-						document.getElementById('box_1_4').style.display = "block";
-						document.getElementById('chart_1_4_br').style.display = "block";
+						detail_display('1', "block");
+						detail_display('2', "none");
+						detail_display('3', "none");
 					}
 					else {
-						document.getElementById('txt_2').style.display = "block";
-						document.getElementById('bar_2').style.display = "block";
-						document.getElementById('alarm_2').style.display = "block";
-						document.getElementById('pic_2').style.display = "block";
-						document.getElementById('hr_2').style.display = "block";
+						all_display('2', "block");
+						all_display('3', "block");
 
-						document.getElementById('txt_3').style.display = "block";
-						document.getElementById('bar_3').style.display = "block";
-						document.getElementById('alarm_3').style.display = "block";
-						document.getElementById('pic_3').style.display = "block";
-						document.getElementById('hr_3').style.display = "block";
-
-						document.getElementById('box_detail_1').style.display = "none";
-						document.getElementById('box_outlier_1').style.display = "none";
-						document.getElementById('gauge_1_br').style.display = "none";
-						document.getElementById('box_1_1').style.display = "none";
-						document.getElementById('chart_1_1_br').style.display = "none";
-						document.getElementById('box_1_2').style.display = "none";
-						document.getElementById('chart_1_2_br').style.display = "none";
-						document.getElementById('box_1_3').style.display = "none";
-						document.getElementById('chart_1_3_br').style.display = "none";
-						document.getElementById('box_1_4').style.display = "none";
-						document.getElementById('chart_1_4_br').style.display = "none";	
+						detail_display('1', "none");
 					}
 				}
 				function detail_display_2() {
 					if (document.getElementById('box_detail_2').style.display == "none") {
-						document.getElementById('txt_1').style.display = "none";
-						document.getElementById('bar_1').style.display = "none";
-						document.getElementById('alarm_1').style.display = "none";
-						document.getElementById('pic_1').style.display = "none";
-						document.getElementById('hr_1').style.display = "none";
-					
-						document.getElementById('box_detail_1').style.display = "none";
-						document.getElementById('box_outlier_1').style.display = "none";
-						document.getElementById('gauge_1_br').style.display = "none";
-						document.getElementById('box_1_1').style.display = "none";
-						document.getElementById('chart_1_1_br').style.display = "none";
-						document.getElementById('box_1_2').style.display = "none";
-						document.getElementById('chart_1_2_br').style.display = "none";
-						document.getElementById('box_1_3').style.display = "none";
-						document.getElementById('chart_1_3_br').style.display = "none";
-						document.getElementById('box_1_4').style.display = "none";
-						document.getElementById('chart_1_4_br').style.display = "none";	
-						
-						document.getElementById('txt_3').style.display = "none";
-						document.getElementById('bar_3').style.display = "none";
-						document.getElementById('alarm_3').style.display = "none";
-						document.getElementById('pic_3').style.display = "none";
-						document.getElementById('hr_3').style.display = "none";
+						all_display('1', "none");
+						all_display('3', "none");
 
-						document.getElementById('box_detail_3').style.display = "none";
-						document.getElementById('box_outlier_3').style.display = "none";
-						document.getElementById('gauge_3_br').style.display = "none";
-						document.getElementById('box_3_1').style.display = "none";
-						document.getElementById('chart_3_1_br').style.display = "none";
-						document.getElementById('box_3_2').style.display = "none";
-						document.getElementById('chart_3_2_br').style.display = "none";
-						document.getElementById('box_3_3').style.display = "none";
-						document.getElementById('chart_3_3_br').style.display = "none";
-						document.getElementById('box_3_4').style.display = "none";
-						document.getElementById('chart_3_4_br').style.display = "none";	
-
-						document.getElementById('box_detail_2').style.display = "block";
-						document.getElementById('box_outlier_2').style.display = "block";
-						document.getElementById('gauge_2_br').style.display = "block";
-						document.getElementById('box_2_1').style.display = "block";
-						document.getElementById('chart_2_1_br').style.display = "block";
-						document.getElementById('box_2_2').style.display = "block";
-						document.getElementById('chart_2_2_br').style.display = "block";
-						document.getElementById('box_2_3').style.display = "block";
-						document.getElementById('chart_2_3_br').style.display = "block";
-						document.getElementById('box_2_4').style.display = "block";
-						document.getElementById('chart_2_4_br').style.display = "block";
+						detail_display('1', "none");
+						detail_display('2', "block");
+						detail_display('3', "none");						
 					}
 					else {
-						document.getElementById('txt_1').style.display = "block";
-						document.getElementById('bar_1').style.display = "block";
-						document.getElementById('alarm_1').style.display = "block";
-						document.getElementById('pic_1').style.display = "block";
-						document.getElementById('hr_1').style.display = "block";
-
-						document.getElementById('txt_3').style.display = "block";
-						document.getElementById('bar_3').style.display = "block";
-						document.getElementById('alarm_3').style.display = "block";
-						document.getElementById('pic_3').style.display = "block";
-						document.getElementById('hr_3').style.display = "block";
+						all_display('1', "block");
+						all_display('3', "block");
 						
-						document.getElementById('box_detail_2').style.display = "none";
-						document.getElementById('box_outlier_2').style.display = "none";
-						document.getElementById('gauge_2_br').style.display = "none";
-						document.getElementById('box_2_1').style.display = "none";
-						document.getElementById('chart_2_1_br').style.display = "none";
-						document.getElementById('box_2_2').style.display = "none";
-						document.getElementById('chart_2_2_br').style.display = "none";
-						document.getElementById('box_2_3').style.display = "none";
-						document.getElementById('chart_2_3_br').style.display = "none";
-						document.getElementById('box_2_4').style.display = "none";
-						document.getElementById('chart_2_4_br').style.display = "none";	
+						detail_display('2', "none");
 					}
 				}
 				function detail_display_3() {
 					if (document.getElementById('box_detail_3').style.display == "none") {
-						document.getElementById('txt_1').style.display = "none";
-						document.getElementById('bar_1').style.display = "none";
-						document.getElementById('alarm_1').style.display = "none";
-						document.getElementById('pic_1').style.display = "none";
-						document.getElementById('hr_1').style.display = "none";
-						
-						document.getElementById('box_detail_1').style.display = "none";
-						document.getElementById('box_outlier_1').style.display = "none";
-						document.getElementById('gauge_1_br').style.display = "none";
-						document.getElementById('box_1_1').style.display = "none";
-						document.getElementById('chart_1_1_br').style.display = "none";
-						document.getElementById('box_1_2').style.display = "none";
-						document.getElementById('chart_1_2_br').style.display = "none";
-						document.getElementById('box_1_3').style.display = "none";
-						document.getElementById('chart_1_3_br').style.display = "none";
-						document.getElementById('box_1_4').style.display = "none";
-						document.getElementById('chart_1_4_br').style.display = "none";	
+						all_display('1', "none");
+						all_display('2', "none");
 
-						document.getElementById('txt_2').style.display = "none";
-						document.getElementById('bar_2').style.display = "none";
-						document.getElementById('alarm_2').style.display = "none";
-						document.getElementById('pic_2').style.display = "none";
-						document.getElementById('hr_2').style.display = "none";
-
-						document.getElementById('box_detail_2').style.display = "none";
-						document.getElementById('box_outlier_2').style.display = "none";
-						document.getElementById('gauge_2_br').style.display = "none";
-						document.getElementById('box_2_1').style.display = "none";
-						document.getElementById('chart_2_1_br').style.display = "none";
-						document.getElementById('box_2_2').style.display = "none";
-						document.getElementById('chart_2_2_br').style.display = "none";
-						document.getElementById('box_2_3').style.display = "none";
-						document.getElementById('chart_2_3_br').style.display = "none";
-						document.getElementById('box_2_4').style.display = "none";
-						document.getElementById('chart_2_4_br').style.display = "none";	
-						
-						document.getElementById('box_detail_3').style.display = "block";
-						document.getElementById('box_outlier_3').style.display = "block";
-						document.getElementById('gauge_3_br').style.display = "block";
-						document.getElementById('box_3_1').style.display = "block";
-						document.getElementById('chart_3_1_br').style.display = "block";
-						document.getElementById('box_3_2').style.display = "block";
-						document.getElementById('chart_3_2_br').style.display = "block";
-						document.getElementById('box_3_3').style.display = "block";
-						document.getElementById('chart_3_3_br').style.display = "block";
-						document.getElementById('box_3_4').style.display = "block";
-						document.getElementById('chart_3_4_br').style.display = "block";
+						detail_display('1', "none");
+						detail_display('2', "none");						
+						detail_display('3', "block");
 					}
 					else {
-						document.getElementById('txt_1').style.display = "block";
-						document.getElementById('bar_1').style.display = "block";
-						document.getElementById('alarm_1').style.display = "block";
-						document.getElementById('pic_1').style.display = "block";
-						document.getElementById('hr_1').style.display = "block";
+						all_display('1', "block");
+						all_display('2', "block");
 						
-						document.getElementById('txt_2').style.display = "block";
-						document.getElementById('bar_2').style.display = "block";
-						document.getElementById('alarm_2').style.display = "block";
-						document.getElementById('pic_2').style.display = "block";
-						document.getElementById('hr_2').style.display = "block";
-						
-						document.getElementById('box_detail_3').style.display = "none";
-						document.getElementById('box_outlier_3').style.display = "none";
-						document.getElementById('gauge_3_br').style.display = "none";
-						document.getElementById('box_3_1').style.display = "none";
-						document.getElementById('chart_3_1_br').style.display = "none";
-						document.getElementById('box_3_2').style.display = "none";
-						document.getElementById('chart_3_2_br').style.display = "none";
-						document.getElementById('box_3_3').style.display = "none";
-						document.getElementById('chart_3_3_br').style.display = "none";
-						document.getElementById('box_3_4').style.display = "none";
-						document.getElementById('chart_3_4_br').style.display = "none";	
+						detail_display('3', "none");
 					}
 				}
 			</script>	
