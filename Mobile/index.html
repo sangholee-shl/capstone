@@ -101,19 +101,14 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			<div style="background-color:rgb(0,0,102); height: 140px; line-height:0px; margin-bottom:5px">
+		<!-- <div style="position:fixed; width:100%; height:164px;"> -->
+			<div style="width:100%; height: 140px; background-color:rgb(0,0,102); line-height:0px; margin-bottom:1px">
 				<center>				
-				<h1 style="background-color: rgb(0,0,102);font-size: 32px; padding-top:34px;"><strong style="color: white">KAIST AI Capstone</strong></h1>
+				<h1 style="background-color: rgb(0,0,102); font-size: 32px; padding-top:34px;"><strong style="color: white">KAIST AI Capstone</strong></h1>
 				<p style="font-size:24px; color:white;">용접 품질 모니터링 시스템</p>
 				</center>
 			</div>
 
-			<!-- <button onclick="chartLoad_1()">Weld_1 Data Load</button>
-			<button onclick="chartLoad_2()">Weld_2 Data Load</button>
-			<button onclick="chartLoad_3()">Weld_3 Data Load</button>
-			<button onclick="chartLoad_4()">Weld_4 Data Load</button> -->
-
-			<!-- <br> -->
 			<div style="background-color: #4696e5; width:100%; height: 35px">
 				<div id="all_menu" class="menu" style="color: white;" onclick="all_menu()">
 					<center>전체</center>
@@ -131,6 +126,16 @@
 					<center>용접4</center>
 				</div>
 			</div>
+		<!-- </div> -->
+
+		<!-- <div style="padding-top:164px !important;"></div> -->
+
+			<!-- <button onclick="chartLoad_1()">Weld_1 Data Load</button>
+			<button onclick="chartLoad_2()">Weld_2 Data Load</button>
+			<button onclick="chartLoad_3()">Weld_3 Data Load</button>
+			<button onclick="chartLoad_4()">Weld_4 Data Load</button> -->
+			<!-- <br> -->
+
 			<!-- <div id="output"></div> -->
 	
 			<section id="one" class="wrapper style2 special">
@@ -229,7 +234,7 @@
 
 <!-- Detail-1 -->
 				<div id="box_detail_1" class="main-title" style="display:none">용접1 상세정보</div>
-				<h2 id="box_outlier_1" class="chart-txt chart-txt-box-0" style="display: none; color: white">이상치</h2>
+				<h2 id="box_outlier_1" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_1_br" style="display: none;"><div id="gauge_1" style="height: 160px"></div><br></div> -->
 
 				<div id="gauge_1_br" style="display:none">
@@ -242,20 +247,20 @@
 							<div class="value-bar"></div>
 							</div>
 						</div></center>
-					<br><br>
+					<br>
 				</div>
 
-				<div id="box_1_1" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
-				<div id="chart_1_1_br" style="display: none;"><center><div id="google_chart_1_1" class="google-chart"></div></center><br></div>
-				<div id="box_1_2" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
+				<div id="box_1_2" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
 				<div id="chart_1_2_br" style="display: none;"><center><div id="google_chart_1_2" class="google-chart"></div></center><br></div>
-				<div id="box_1_3" style="display: none"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
+				<div id="box_1_1" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
+				<div id="chart_1_1_br" style="display: none;"><center><div id="google_chart_1_1" class="google-chart"></div></center><br></div>
+				<div id="box_1_3" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
 				<div id="chart_1_3_br" style="display: none;"><center><div id="google_chart_1_3" class="google-chart"></div></center><br></div>
-				<div id="box_1_4" style="display: none"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
+				<div id="box_1_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_1_4_br" style="display: none;"><center><div id="google_chart_1_4" class="google-chart"></div></center><br></div>
 <!-- Detail-2 -->
 				<div id="box_detail_2" class="main-title" style="display:none">용접2 상세정보</div>
-				<h2 id="box_outlier_2" class="chart-txt chart-txt-box-0" style="display: none; color: white">이상치</h2>
+				<h2 id="box_outlier_2" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_2_br" style="display: none;"><div id="gauge_2" style="height: 160px"></div><br></div> -->
 
 				<div id="gauge_2_br" style="display:none">
@@ -268,21 +273,21 @@
 							<div class="value-bar"></div>
 							</div>
 						</div></center>
-					<br><br>
+					<br>
 				</div>
 
-				<div id="box_2_1" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
-				<div id="chart_2_1_br" style="display: none;"><center><div id="google_chart_2_1" class="google-chart"></div></center><br></div>
-				<div id="box_2_2" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
+				<div id="box_2_2" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
 				<div id="chart_2_2_br" style="display: none;"><center><div id="google_chart_2_2" class="google-chart"></div></center><br></div>
-				<div id="box_2_3" style="display: none"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
+				<div id="box_2_1" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
+				<div id="chart_2_1_br" style="display: none;"><center><div id="google_chart_2_1" class="google-chart"></div></center><br></div>
+				<div id="box_2_3" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
 				<div id="chart_2_3_br" style="display: none;"><center><div id="google_chart_2_3" class="google-chart"></div></center><br></div>
-				<div id="box_2_4" style="display: none"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
+				<div id="box_2_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_2_4_br" style="display: none;"><center><div id="google_chart_2_4" class="google-chart"></div></center><br></div>
 
 <!-- Detail-3 -->
 				<div id="box_detail_3" class="main-title" style="display:none">용접3 상세정보</div>
-				<h2 id="box_outlier_3" class="chart-txt chart-txt-box-0" style="display: none; color: white">이상치</h2>
+				<h2 id="box_outlier_3" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_3_br" style="display: none;"><div id="gauge_3" style="height: 160px"></div><br></div> -->
 
 				<div id="gauge_3_br" style="display:none">
@@ -295,21 +300,21 @@
 							<div class="value-bar"></div>
 							</div>
 						</div></center>
-					<br><br>
+					<br>
 				</div>
 
-				<div id="box_3_1" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
+				<div id="box_3_2" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
+				<div id="chart_3_2_br" style="display: none; "><center><div id="google_chart_3_2" class="google-chart"></div></center><br></div>
+				<div id="box_3_1" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
 				<div id="chart_3_1_br" style="display: none;"><center><div id="google_chart_3_1" class="google-chart"></div></center><br></div>
-				<div id="box_3_2" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
-				<div id="chart_3_2_br" style="display: none;"><center><div id="google_chart_3_2" class="google-chart"></div></center><br></div>
-				<div id="box_3_3" style="display: none"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
+				<div id="box_3_3" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
 				<div id="chart_3_3_br" style="display: none;"><center><div id="google_chart_3_3" class="google-chart"></div></center><br></div>
-				<div id="box_3_4" style="display: none"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
+				<div id="box_3_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_3_4_br" style="display: none;"><center><div id="google_chart_3_4" class="google-chart"></div></center><br></div>
 
 <!-- Detail-4 -->
 				<div id="box_detail_4" class="main-title" style="display:none">용접4 상세정보</div>
-				<h2 id="box_outlier_4" class="chart-txt chart-txt-box-0" style="display: none; color: white">이상치</h2>
+				<h2 id="box_outlier_4" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_4_br" style="display: none;"><div id="gauge_4" style="height: 160px"></div><br></div> -->
 
 				<div id="gauge_4_br" style="display:none">
@@ -322,17 +327,17 @@
 						<div class="value-bar"></div>
 						</div>
 					</div></center>
-				<br><br>
+				<br>
 				</div>
 
-				<div id="box_4_1" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
-				<div id="chart_4_1_br" style="display: none;"><center><div id="google_chart_4_1" class="google-chart"></div></center><br><br></div>
-				<div id="box_4_2" style="display: none"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
-				<div id="chart_4_2_br" style="display: none;"><center><div id="google_chart_4_2" class="google-chart"></div></center><br><br></div>
-				<div id="box_4_3" style="display: none"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
-				<div id="chart_4_3_br" style="display: none;"><center><div id="google_chart_4_3" class="google-chart"></div></center><br><br></div>
-				<div id="box_4_4" style="display: none"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
-				<div id="chart_4_4_br" style="display: none;"><center><div id="google_chart_4_4" class="google-chart"></div></center><br><br></div>
+				<div id="box_4_2" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전류</h2><br></div>
+				<div id="chart_4_2_br" style="display: none;"><center><div id="google_chart_4_2" class="google-chart"></div></center><br></div>
+				<div id="box_4_1" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-12" style="color:white">전압</h2><br></div>
+				<div id="chart_4_1_br" style="display: none;"><center><div id="google_chart_4_1" class="google-chart"></div></center><br></div>
+				<div id="box_4_3" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-3" style="color:white">보호가스</h2><br></div>
+				<div id="chart_4_3_br" style="display: none;"><center><div id="google_chart_4_3" class="google-chart"></div></center><br></div>
+				<div id="box_4_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
+				<div id="chart_4_4_br" style="display: none;"><center><div id="google_chart_4_4" class="google-chart"></div></center><br></div>
 
 
 				<!-- <center><video width="90%" src="./welding.mp4" autoplay muted loop></video></center><br> -->
