@@ -31,10 +31,10 @@
 			}
 			
 			.container {
-            	background-color: rgb(192, 192, 192);
-            	width: 100%;
-                border-radius: 15px;
-        }
+            			background-color: rgb(192, 192, 192);
+            			width: 100%;
+                		border-radius: 15px;
+        		}
 			.skill {
 				/* background-color: rgb(116, 194, 92); */
 				/* background-color: rgb(64, 64, 64); */
@@ -44,8 +44,8 @@
 				padding: 1%;
 				text-align: right;
 				font-size: 20px;
-                border-radius: 15px;
-        	}
+				border-radius: 15px;
+        		}
 			.menu{
 				display: block; 
 				width:20%;
@@ -142,7 +142,7 @@
 <!-- Status -->
 
 			<!-- <div class="main-title" style="display:none" onclick="all_display_click()">전체 용접 상태</div> -->
-
+<div id="page_total">
 <!-- Weld-1 -->
 		<div style="margin-top: -5px">
 			<div id="txt_1" style="display: block; width:20%; float:left; color: black" onclick ="weld_1()" >
@@ -235,8 +235,10 @@
 				</div>
 			</div>
 			<br id="hr_4" style="display: block">	
+</div>
 
 <!-- Detail-1 -->
+<div id="page_1">
 				<div id="box_detail_1" class="main-title" style="display:none">용접1 상세정보</div>
 				<h2 id="box_outlier_1" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_1_br" style="display: none;"><div id="gauge_1" style="height: 160px"></div><br></div> -->
@@ -262,7 +264,9 @@
 				<div id="chart_1_3_br" style="display: none;"><center><div id="google_chart_1_3" class="google-chart"></div></center><br></div>
 				<div id="box_1_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_1_4_br" style="display: none;"><center><div id="google_chart_1_4" class="google-chart"></div></center><br></div>
+</div>	
 <!-- Detail-2 -->
+<div id="page_2">
 				<div id="box_detail_2" class="main-title" style="display:none">용접2 상세정보</div>
 				<h2 id="box_outlier_2" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_2_br" style="display: none;"><div id="gauge_2" style="height: 160px"></div><br></div> -->
@@ -288,8 +292,10 @@
 				<div id="chart_2_3_br" style="display: none;"><center><div id="google_chart_2_3" class="google-chart"></div></center><br></div>
 				<div id="box_2_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_2_4_br" style="display: none;"><center><div id="google_chart_2_4" class="google-chart"></div></center><br></div>
+</div>	
 
 <!-- Detail-3 -->
+<div id="page_3">
 				<div id="box_detail_3" class="main-title" style="display:none">용접3 상세정보</div>
 				<h2 id="box_outlier_3" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_3_br" style="display: none;"><div id="gauge_3" style="height: 160px"></div><br></div> -->
@@ -315,8 +321,10 @@
 				<div id="chart_3_3_br" style="display: none;"><center><div id="google_chart_3_3" class="google-chart"></div></center><br></div>
 				<div id="box_3_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_3_4_br" style="display: none;"><center><div id="google_chart_3_4" class="google-chart"></div></center><br></div>
+</div>	
 
 <!-- Detail-4 -->
+<div id="page_4">
 				<div id="box_detail_4" class="main-title" style="display:none">용접4 상세정보</div>
 				<h2 id="box_outlier_4" class="chart-txt chart-txt-box-0" style="margin-bottom: -5px; display: none; color: white">이상치</h2>
 				<!-- <div id="gauge_4_br" style="display: none;"><div id="gauge_4" style="height: 160px"></div><br></div> -->
@@ -342,6 +350,7 @@
 				<div id="chart_4_3_br" style="display: none;"><center><div id="google_chart_4_3" class="google-chart"></div></center><br></div>
 				<div id="box_4_4" style="display: none; margin-bottom: -15px"><h2 class="chart-txt chart-txt-box-4" style="color:white">와이어 속도</h2><br></div>
 				<div id="chart_4_4_br" style="display: none;"><center><div id="google_chart_4_4" class="google-chart"></div></center><br></div>
+</div>	
 
 
 				<!-- <center><video width="90%" src="./welding.mp4" autoplay muted loop></video></center><br> -->
@@ -367,7 +376,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/gauge.js"> </script>
+			<script src="assets/js/gauge.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 		<!-- My test -->
 			<script type="text/javascript">
