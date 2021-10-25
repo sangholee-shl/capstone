@@ -32,10 +32,10 @@
 			}
 			
 			.container-progress {
-            	background-color: rgb(192, 192, 192);
-            	width: 100%;
-                border-radius: 15px;
-        	}
+            			background-color: rgb(192, 192, 192);
+            			width: 100%;
+                		border-radius: 15px;
+        		}
 			.main-title {
 				background-color: #4696e5;
 				height: 32px;
@@ -76,8 +76,8 @@
 				padding: 1%;
 				text-align: right;
 				font-size: 20px;
-                border-radius: 15px;				
-        	}
+                		border-radius: 15px;				
+        		}
 			.total-gauge {
 				width:20%; 
 				float:left;
@@ -135,6 +135,15 @@
 				padding:10px 10px 10px 10px;
 				border: 1px solid rgb(225, 225, 225);
 				border-radius: 5px / 5px;
+			}
+			
+			@keyframes blink-effect {
+				50% {
+					opacity: 0;
+				}
+			}
+			.blink {
+				animation: blink-effect 1s step-end infinite;
 			}
 		</style>
 	</head>
@@ -194,7 +203,7 @@
 								<hr>
 <!-- 용접1 -->								
 								<div class="total-row">
-									<div class="total-txt">
+									<div id="txt_1" class="total-txt">
 										용접1
 									</div>
 									<div class="total-progressbar">
@@ -224,7 +233,7 @@
 								<hr>
 <!-- 용접2 -->
 								<div class="total-row">
-									<div class="total-txt">
+									<div id="txt_2" class="total-txt">
 										용접2
 									</div>
 									<div class="total-progressbar">
@@ -254,7 +263,7 @@
 								<hr>
 <!-- 용접3 -->
 								<div class="total-row">
-									<div class="total-txt">
+									<div id="txt_3" class="total-txt">
 										용접3
 									</div>
 									<div class="total-progressbar">
@@ -284,7 +293,7 @@
 								<hr>
 <!-- 용접4 -->
 								<div class="total-row">
-									<div class="total-txt">
+									<div id="txt_4" class="total-txt">
 										용접4
 									</div>
 									<div class="total-progressbar">
@@ -814,8 +823,14 @@
 
 						if (DEFECT_raw[read_cnt] == 1)
 							document.getElementById('status_indicator_1').src = "images/red_circle.jpg";
+							document.getElementById('status_indicator_1').className = "total-alarm-1 blink";
+							document.getElementById('txt_1').style.color = "red";
+							document.getElementById('txt_1').className = "total-txt blink";
 						else
 							document.getElementById('status_indicator_1').src = "images/green_circle.jpg";
+							document.getElementById('status_indicator_1').className = "total-alarm-1";
+							document.getElementById('txt_1').style.color = "black";
+							document.getElementById('txt_1').className = "total-txt";
 						// for(var i=1; i<=read_cnt-1; i++) {
 						for(var i=1; i<=read_cnt;i++) {
 							outlier_temp = OUTLIER_raw[i];
@@ -994,8 +1009,14 @@
 						
 						if (DEFECT_raw[read_cnt] == 1)
 							document.getElementById('status_indicator_2').src = "images/red_circle.jpg";
+							document.getElementById('status_indicator_2').className = "total-alarm-1 blink";
+							document.getElementById('txt_2').style.color = "red";
+							document.getElementById('txt_2').className = "total-txt blink";
 						else
 							document.getElementById('status_indicator_2').src = "images/green_circle.jpg";
+							document.getElementById('status_indicator_2').className = "total-alarm-1";
+							document.getElementById('txt_2').style.color = "black";
+							document.getElementById('txt_2').className = "total-txt";
 						// for(var i=1; i<=read_cnt-1; i++) {
 						for(var i=1; i<=read_cnt;i++) {
 							outlier_temp = OUTLIER_raw[i];
@@ -1174,8 +1195,14 @@
 						
 						if (DEFECT_raw[read_cnt] == 1)
 							document.getElementById('status_indicator_3').src = "images/red_circle.jpg";
+							document.getElementById('status_indicator_3').className = "total-alarm-1 blink";
+							document.getElementById('txt_3').style.color = "red";
+							document.getElementById('txt_3').className = "total-txt blink";						
 						else
 							document.getElementById('status_indicator_3').src = "images/green_circle.jpg";
+							document.getElementById('status_indicator_3').className = "total-alarm-1";
+							document.getElementById('txt_3').style.color = "black";
+							document.getElementById('txt_3').className = "total-txt";
 						// for(var i=1; i<=read_cnt-1; i++) {
 						for(var i=1; i<=read_cnt;i++) {
 							outlier_temp = OUTLIER_raw[i];
@@ -1353,8 +1380,14 @@
 						
 						if (DEFECT_raw[read_cnt] == 1)
 							document.getElementById('status_indicator_4').src = "images/red_circle.jpg";
+							document.getElementById('status_indicator_4').className = "total-alarm-1 blink";
+							document.getElementById('txt_4').style.color = "red";
+							document.getElementById('txt_4').className = "total-txt blink";	
 						else
 							document.getElementById('status_indicator_4').src = "images/green_circle.jpg";
+							document.getElementById('status_indicator_4').className = "total-alarm-1";
+							document.getElementById('txt_4').style.color = "black";
+							document.getElementById('txt_4').className = "total-txt";
 						// for(var i=1; i<=read_cnt-1; i++) {
 						for(var i=1; i<=read_cnt;i++) {
 							outlier_temp = OUTLIER_raw[i];
